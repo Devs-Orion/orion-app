@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Destello",
+        "imagen": "https://rentamecabanas.pythonanywhere.com/media/ORION/destello.png",
+        "descripcion": "Destello es un personaje jugable que destaca por su rapidez y letalidad en combate. Armada con un rifle y una pistola, Destello puede adaptarse a diferentes situaciones de combate, ya sea a larga o corta distancia. Su traje futurista, predominantemente azul con acentos dorados y plateados, está diseñado para maximizar su agilidad y resistencia",
+        "habilidad": "Aceleración Extrema",
+        "vestimenta": "Su traje futurista, predominantemente azul con acentos dorados y plateados, está diseñado para maximizar su agilidad y resistencia",
+        "arma": "Rifle"
+    },
+    {
+        "nombre": "Spectro",
+        "imagen": "https://rentamecabanas.pythonanywhere.com/media/ORION/spectro.png",
+        "descripcion": "Spectro es un personaje jugable especializado en el combate a larga distancia. Equipado con un rifle de gran calibre, Spectro puede eliminar enemigos desde posiciones estratégicas con precisión letal",
+        "habilidad": "Ralentización Temporal",
+        "vestimenta": "Su traje está diseñado para ofrecer máxima movilidad y protección. Dicho traje incluye patrones geométricos y líneas brillantes, cubriendo todo su cuerpo, lo que le permite ocultarse entre superficies rocosas y, a su vez, cubriéndolo de los peligros del Planeta Rojo",
+        "arma": "Rifle"
+    },
+    {
+        "nombre": "Sombra",
+        "imagen": "https://rentamecabanas.pythonanywhere.com/media/ORION/sombra.png",
+        "descripcion": "Sombra es un personaje jugable que combina agilidad y letalidad en combate a distancia. Al igual que Spectro, cuenta con un rifle que le permitirá atacar a sus enemigos",
+        "habilidad": "Intangibilidad",
+        "vestimenta": "La armadura es predominantemente de color oscuro con detalles en tonos naranjas y plateados. Cubre todo el cuerpo, incluyendo las manos y los pies. Sus codos se encuentran protegidas por hojas de acero de color naranja, lo que le permite diferenciarse de sus enemigos y recibir ayuda de sus compañeros",
+        "arma": "Rifle"
+    }
+]

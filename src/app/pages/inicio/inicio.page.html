@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding background">
+  <h1 class="titulo">Personajes</h1>
+  <swiper-container slides-per-view="1" loop="true" css-mode="true">
+    <!--Al dar clic, se activa la función verDetalle() y toma como parámentro el índice del for para asignarlo como un ID, ya que el JSON no cuenta con ningún id.-->
+    <swiper-slide (click)="verDetalle(id)" *ngFor="let personaje of personajes; let id=index">
+      <ion-card>
+        <div class="card-imagen">
+          <img alt="{{ personaje.nombre}}" src="{{personaje.imagen}}" />
+        </div>
+        <ion-card-header>
+          <ion-card-title>{{ personaje.nombre }}</ion-card-title>
+          <ion-card-subtitle class="borde">{{ personaje.habilidad}}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+
+  <h1 class="titulo">Sinopsis</h1>
+  <div class="ion-text-justify text-color">
+    Un mundo en que, sólo los más privilegiados, tienen la opción de modificar a sus descendientes genéticamente. El
+    planeta Tierra está en crisis, la sobrepoblación ha agotado los recursos naturales, casi por completo, y el gobierno
+    ha lanzado un proyecto secreto para colonizar Marte.
+    Tres soldados de élite, modificados genéticamente y con habilidades especiales, son seleccionados para esta misión
+    peligrosa. Sin embargo, su objetivo no es solo la colonización, sino también descubrir qué ocurrió con una misión
+    anterior que desapareció misteriosamente. Al llegar a Marte, pronto se dan cuenta de que no están solos. Criaturas
+    nativas hostiles y tecnología alienígena desconocida les esperan, así como secretos oscuros relacionados con la
+    misión anterior y el Proyecto HGMP-1, un experimento fallido de modificación genética.
+  </div>
+  <img src="../../../assets/img/logo.png">
+</ion-content>

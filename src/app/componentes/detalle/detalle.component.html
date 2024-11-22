@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{detallePersonaje.nombre}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="regresar()" [strong]="true">REGRESAR</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-icon aria-hidden="true" size="large" name="help-circle-outline" slot="start"></ion-icon>
+      <ion-label>
+        <b>DESCRIPCIÓN</b><br>
+        <p class="ion-text-justify">
+          {{detallePersonaje.descripcion}}.
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon aria-hidden="true" name="eyedrop-outline" slot="start"></ion-icon>
+      <ion-label>
+        <b>ARMA</b><br>
+        <p class="ion-text-justify">
+          {{detallePersonaje.arma}}.
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon aria-hidden="true" name="sparkles-outline" slot="start"></ion-icon>
+      <ion-label>
+        <b>HABILIDAD</b><br>
+        <p class="ion-text-justify">
+          {{detallePersonaje.habilidad}}.
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon aria-hidden="true" name="shirt-outline" slot="start"></ion-icon>
+      <ion-label>
+        <b>VESTIMENTA</b><br>
+        <p class="ion-text-justify">
+          {{detallePersonaje.vestimenta}}.
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
