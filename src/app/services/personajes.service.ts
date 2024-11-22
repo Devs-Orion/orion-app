@@ -10,10 +10,10 @@ export class PersonajesService {
   constructor(private http: HttpClient) { }
 
   getDatos() {
-    return this.http.get('https://super-firebase-54661-default-rtdb.firebaseio.com/.json');
+    return this.http.get('https://orion-bd-default-rtdb.firebaseio.com/.json');
   }
 
   getDetalle(id: number) {
-    return this.http.get<Personajes>(`https://super-firebase-54661-default-rtdb.firebaseio.com/${id}.json`);
+    return this.http.get<Personajes>(`https://orion-bd-default-rtdb.firebaseio.com/${id}.json`);
   }
 }
