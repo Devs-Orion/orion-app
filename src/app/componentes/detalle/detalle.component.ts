@@ -14,19 +14,19 @@ export class DetalleComponent implements OnInit {
   detallePersonaje = {} as Personajes;
 
   constructor(
-    private detalle: PersonajesService,
-    private modalCtrl: ModalController
+    private detalle: PersonajesService, //Variable que contiene el servicio de la API
+    private modalCtrl: ModalController //Variable que contiene el controlador del Modal.
   ) { }
 
-  regresar() {
+  regresar() { //Función para cerrar el modal.
     this.modalCtrl.dismiss();
   }
 
   ngOnInit() {
-    this.detalle.getDetalle(this.id)
-      .subscribe((respuesta: Personajes) => {
-        console.log('Detalle Personaje:', respuesta);
-        this.detallePersonaje = respuesta;
+    this.detalle.getDetalle(this.id) //Obtenemos el detalle por su id.
+      .subscribe((respuesta: Personajes) => { //Se recibe como parámetro la Interfaz Personajes.
+        console.log('Detalle Personaje:', respuesta); //Imprimimos en consola el detalle del Personaje.
+        this.detallePersonaje = respuesta; //Asignamos los datos de detalle personaje a la Interfaz.
       });
   }
 

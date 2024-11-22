@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { register } from 'swiper/element/bundle';
-interface Elemento {
+interface Elemento { //Interfaz que guarda los elementos del menú.
   icono: string;
   nombre: string;
   ruta: string;
@@ -14,7 +14,7 @@ register();
 })
 export class AppComponent {
 
-  elementos: Elemento[] = [
+  elementos: Elemento[] = [ //Lista de los elementos del menú. El tipo de dato es la Interfaz previamente creada.
     {
       icono: 'person-circle-outline',
       nombre: 'Perfil',

@@ -18,7 +18,7 @@ export class InicioPage implements OnInit {
   ) { }
 
   //Función asíncrona que es ejecutada al dar clic sobre el card de un personaje.
-  async verDetalle(id: number) {
+  async verDetalle(id: number) { //Se recibe como parámetro el id (para más info. consulte personakes.service.ts).
     const modal = await this.modalCtrl.create({
       component: DetalleComponent,
       componentProps: { id }
@@ -28,10 +28,10 @@ export class InicioPage implements OnInit {
   }
 
   ngOnInit() {
-    this.servicioPersonajes.getDatos()
+    this.servicioPersonajes.getDatos()//Se obtienen los datos.
       .subscribe((bd: any) => {
-        this.personajes = bd;
-        console.log(this.personajes);
+        this.personajes = bd; //Se asignan los datos obtenidos de los personajes a la variable bd.
+        console.log(this.personajes); //Se imprimen en consola los datos.
       });
   }
 
