@@ -1,14 +1,19 @@
-<!--HTML para mostrar el perfil del usuario activo.-->
 <app-header titulo="Perfil"></app-header>
 <ion-content [fullscreen]="true" class="background">
   <div class="perfil-container ion-text-center">
     <ion-icon name="person-circle-outline" class="profile-icon"></ion-icon>
-    <h2 class="username">Karen</h2>
-    <p class="user-email"> micorreo.com </p>
+    <!-- Muestra el nombre y el correo del usuario -->
+    <h2 class="username">{{ userStats?.displayName || 'Usuario' }}</h2>
+    <p class="user-email">{{ userData?.email || 'Correo no disponible' }}</p>
 
-    <ion-button color="danger">
-      Cerrar sesión
+    <!-- Botón para actualizar el nombre -->
+    <ion-button color="primary" (click)="editarNombre()">
+      Editar Nombre
     </ion-button>
 
+    <!-- Botón para cerrar sesión -->
+    <ion-button color="danger" (click)="cerrarSesion()">
+      Cerrar sesión
+    </ion-button>
   </div>
 </ion-content>

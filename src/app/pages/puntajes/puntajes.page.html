@@ -9,13 +9,25 @@
         <ion-col>TABLA DE PUNTUACIONES</ion-col>
       </ion-row>
       <ion-row class="subtitulo">
+        <ion-col>Nivel</ion-col>
         <ion-col>Puntaje</ion-col>
         <ion-col>Tiempo</ion-col>
       </ion-row>
 
       <ion-row class="row">
-        <ion-col>1000</ion-col>
-        <ion-col>5:30</ion-col>
+        <ion-col>1</ion-col>
+        <ion-col>{{ userStats?.lvl_1_best_score || 'Sin Partidas' }}</ion-col>
+        <ion-col>{{ userStats?.lvl_1_best_time || 'Sin Partidas' }}</ion-col>
+      </ion-row>
+      <ion-row class="row">
+        <ion-col>2</ion-col>
+        <ion-col>{{ userStats?.lvl_2_best_score || 'Sin Partidas' }}</ion-col>
+        <ion-col>{{ userStats?.lvl_2_best_time || 'Sin Partidas' }}</ion-col>
+      </ion-row>
+      <ion-row class="row">
+        <ion-col>3</ion-col>
+        <ion-col>{{ userStats?.lvl_3_best_score || 'Sin Partidas' }}</ion-col>
+        <ion-col>{{ userStats?.lvl_3_best_time || 'Sin Partidas' }}</ion-col>
       </ion-row>
     </ion-grid>
   </div>

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="ion-text-center">Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center dark-theme background">
+  <div class="logo-container">
+    <img src="../../../assets/img/logo.png" class="logo">
+  </div>
+
+  <form (ngSubmit)="onSubmit()">
+    <!-- Campo de Correo Electrónico -->
+    <ion-item class="dark-item">
+      <ion-label position="stacked" class="ion-text-center">Correo Electrónico</ion-label>
+      <ion-input 
+        type="email" 
+        [(ngModel)]="email" 
+        placeholder="Escribe aquí..." 
+        name="email" 
+        required>
+      </ion-input> 
+    </ion-item>
+
+    <!-- Campo de Contraseña -->
+    <ion-item class="dark-item">
+      <ion-label position="stacked" class="ion-text-center">Contraseña</ion-label>
+      <ion-input 
+        [type]="passwordFieldType"
+        [(ngModel)]="password" 
+        name="password" 
+        required >
+      </ion-input>  
+      <ion-button 
+        fill="clear" 
+        slot="end" 
+        (click)="togglePasswordVisibility()" 
+        title="Mostrar/Ocultar contraseña" 
+        aria-label="Mostrar u ocultar contraseña">
+        <ion-icon [name]="passwordToggleIcon"></ion-icon> 
+      </ion-button>
+    </ion-item>
+
+    <br>
+    <!-- Botón de Iniciar Sesión -->
+    <ion-button expand="block" type="submit" class="login-button">Iniciar Sesión</ion-button>
+  </form>
+</ion-content>

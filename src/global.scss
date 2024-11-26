@@ -45,5 +45,44 @@
 }
 
 ion-content.background {
-    --background: url(../../../assets/img/background.jpg) 0 0/100% 100% no-repeat;
+    --background: url('/assets/img/background.jpg') 0 0/100% 100% no-repeat;
 }
+
+.custom-dark-alert {
+    --background: #1e1e1e;
+    --color: #ffffff;
+    --button-background: #333;
+    --button-color: #ffffff;
+    --placeholder-color: #888;
+    --header-color: #ffffff;
+    --header-background: #222;
+      /* Desactiva el desenfoque en el backdrop */
+    .backdrop {
+        backdrop-filter: none !important; /* Elimina el desenfoque */
+    }
+  }
+  
+  .custom-dark-alert .alert-wrapper {
+    background-color: var(--background);
+    color: var(--color);
+  }
+  
+  .custom-dark-alert .alert-title {
+    color: var(--header-color);
+    background-color: var(--header-background);
+  }
+  
+  .custom-dark-alert .alert-button {
+    background-color: var(--button-background);
+    color: var(--button-color);
+  }
+  
+  .custom-dark-alert .alert-button:not(.alert-button-role-cancel) {
+    background-color: #444;
+  }
+  
+  .custom-dark-alert .alert-input {
+    color: #7c7c7c;
+    border-bottom: 1px solid var(--placeholder-color);
+  }
+  

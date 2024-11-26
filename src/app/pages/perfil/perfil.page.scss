@@ -24,3 +24,22 @@ ion-content.background {
     color: #ffffff;
     margin-bottom: 20px;
 }
+
+.custom-dark-alert {
+  --background: #121212; /* Fondo oscuro */
+  --ion-text-color: #ffffff; /* Texto blanco */
+  --ion-color-primary: #bb86fc; /* Color principal */
+  --ion-color-secondary: #03dac6; /* Color secundario */
+
+  ion-alert-title {
+    color: var(--ion-text-color);
+  }
+
+  ion-alert-message {
+    color: var(--ion-text-color);
+  }
+
+  ion-button {
+    color: var(--ion-text-color);
+  }
+}

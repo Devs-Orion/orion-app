@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 import { register } from 'swiper/element/bundle';
 interface Elemento { //Interfaz que guarda los elementos del menú.
   icono: string;
@@ -27,5 +28,11 @@ export class AppComponent {
     }
   ];
 
-  constructor() { }
+  constructor(private menuCtrl: MenuController) {}
+  cerrarMenu() {
+    // Cierra el menú después de 1 segundo (1000 ms)
+    setTimeout(() => {
+      this.menuCtrl.close();
+    }, 500);
+  }
 }
