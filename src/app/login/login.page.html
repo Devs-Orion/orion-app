@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title class="ion-text-center">Iniciar Sesión</ion-title>
+    <ion-title>Iniciar Sesión</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,32 +12,19 @@
   <form (ngSubmit)="onSubmit()">
     <!-- Campo de Correo Electrónico -->
     <ion-item class="dark-item">
-      <ion-label position="stacked" class="ion-text-center">Correo Electrónico</ion-label>
-      <ion-input 
-        type="email" 
-        [(ngModel)]="email" 
-        placeholder="Escribe aquí..." 
-        name="email" 
-        required>
-      </ion-input> 
+      <ion-label position="stacked">Correo Electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="email" placeholder="Escribe aquí..." name="email" required>
+      </ion-input>
     </ion-item>
 
     <!-- Campo de Contraseña -->
     <ion-item class="dark-item">
-      <ion-label position="stacked" class="ion-text-center">Contraseña</ion-label>
-      <ion-input 
-        [type]="passwordFieldType"
-        [(ngModel)]="password" 
-        name="password" 
-        required >
-      </ion-input>  
-      <ion-button 
-        fill="clear" 
-        slot="end" 
-        (click)="togglePasswordVisibility()" 
-        title="Mostrar/Ocultar contraseña" 
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input [type]="passwordFieldType" [(ngModel)]="password" name="password" required>
+      </ion-input>
+      <ion-button fill="clear" slot="end" (click)="togglePasswordVisibility()" title="Mostrar/Ocultar contraseña"
         aria-label="Mostrar u ocultar contraseña">
-        <ion-icon [name]="passwordToggleIcon"></ion-icon> 
+        <ion-icon [name]="passwordToggleIcon"></ion-icon>
       </ion-button>
     </ion-item>
 
